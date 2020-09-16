@@ -103,13 +103,19 @@
                                 $qu_count = 0;
                             @endphp
                             @foreach($questions as $question)
+                           
+                              @php
+                                var_dump($question->id);
+                                var_dump($topic->id);
+                                var_dump($question->topic_id);
+                              @endphp
                               @if($question->topic_id == $topic->id)
                                 @php 
                                   $qu_count++;
                                 @endphp
                               @endif
                             @endforeach
-                            {{$topic->per_q_mark*$qu_count}}
+                            {{$qu_count}}
                           </li>
                           <li>
                             {{$topic->timer}} min.

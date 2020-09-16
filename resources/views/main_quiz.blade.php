@@ -63,7 +63,7 @@
       ?>
        @if(!empty($users))
           <div class="alert alert-danger">
-              You have already Given the test ! Try to give other Quizes
+              Este tópico ja foi respodido.
           </div>
        @else
       <div id="question_block" class="question-block">
@@ -72,7 +72,7 @@
       @endif
       @if(empty($que))
       <div class="alert alert-danger">
-            No Questions in this quiz
+            Não exite questões para esse topico
       </div>
       @endif
     </div>
@@ -125,7 +125,7 @@
               elapse: !0
           }).on("update.countdown", function(e) {
               var i = $(this);
-              e.elapsed ? (Cookies.set("done", "Your Quiz is Over...!", {
+              e.elapsed ? (Cookies.set("Pronto", "Seu questionario acabou...!", {
                   expires: 1
               }), Cookies.remove("time"), location.href = "{{$topic->id}}/finish") : i.html(e.strftime("<span>%H:%M:%S</span>"))
           })
