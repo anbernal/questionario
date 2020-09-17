@@ -103,13 +103,7 @@
                                 $qu_count = 0;
                             @endphp
                             @foreach($questions as $question)
-                           
-                              @php
-                                var_dump($question->id);
-                                var_dump($topic->id);
-                                var_dump($question->topic_id);
-                              @endphp
-                              @if($question->topic_id == $topic->id)
+                              @if($question->topic_id == $topic->topics_id)
                                 @php 
                                   $qu_count++;
                                 @endphp
@@ -142,13 +136,13 @@
                     </div>
                   @endif
 
-                    @if($auth->topic()->where('topic_id', $topic->id)->exists())
-                      <a href="{{route('start_quiz', ['id' => $topic->id])}}" class="btn btn-primary" title="Iniciar Avaliação">Iniciar Avaliação</a>
+                    @if($auth->topic()->where('topic_id', $topic->topics_id)->exists())
+                      <a href="{{route('start_quiz', ['id' => $topic->topics_id])}}" class="btn btn-primary" title="Iniciar Avaliação">Iniciar Avaliação</a>
                     @else
                       {!! Form::open(['method' => 'POST', 'action' => 'PaypalController@paypal_post']) !!} 
                         {{ csrf_field() }}
-                        <input type="hidden" name="topic_id" value="{{$topic->id}}"/>
-                          <a href="{{route('start_quiz', ['id' => $topic->id])}}" class="btn btn-primary" title="Iniciar Avaliação">Iniciar Avaliação</a>
+                        <input type="hidden" name="topic_id" value="{{$topic->topics_id}}"/>
+                          <a href="{{route('start_quiz', ['id' => $topic->topics_id])}}" class="btn btn-primary" title="Iniciar Avaliação">Iniciar Avaliação</a>
                       {!! Form::close() !!}
                     @endif
                   </div>
@@ -159,12 +153,12 @@
                       $a = false;
                       $que_count = $topic->question ? $topic->question->count() : null;
                       $ans = $auth->answers;
-                      $ans_count = $ans ? $ans->where('topic_id', $topic->id)->count() : null;
+                      $ans_count = $ans ? $ans->where('topic_id', $topic->topics_id)->count() : null;
                       if($que_count && $ans_count && $que_count == $ans_count){
                         $a = true;
                       }
                     @endphp
-                    <a href="{{$a ? url('start_quiz/'.$topic->id.'/finish') : route('start_quiz', ['id' => $topic->id])}}" class="btn btn-block" title="Start Quiz">Start Quiz
+                    <a href="{{$a ? url('start_quiz/'.$topic->topics_id.'/finish') : route('start_quiz', ['id' => $topic->topics_id])}}" class="btn btn-block" title="Start Quiz">Start Quiz
                     </a>
                   </div> --}}
                 </div>

@@ -1,8 +1,11 @@
 @extends('layouts.admin', [
   'page_header' => 'Students Report By Topic Wise',
+  'page_icon' => 'fa fa-file-text-o',
   'dash' => '',
-  'quiz' => '',
   'users' => '',
+  'funcao' => '',
+  'matriz' => '',
+  'quiz' => '',
   'questions' => '',
   'top_re' => '',
   'all_re' => 'active',
@@ -53,7 +56,7 @@
                 </ul>
               </div>
             </div>
-            <a href="{{route('all_reports.show', $topic->id)}}" class="btn btn-wave">Show Report</a>
+            <a href="{{route('all_reports.show', $topic->id)}}" class="btn btn-wave">Ver Resultado</a>
           </div>
         </div>
       @endforeach

@@ -43,20 +43,24 @@ Route::get('/faqs',function(){
 })->name('faq.get');
 
 Route::get('/home', function(){
-
-          $auth = Auth::user();
- 
-          $topics = DB::table('topics')
-          ->join('matrizs', 'topics.id', '=', 'matrizs.topics_id')
-          ->where('matrizs.funcaos_id', $auth->role )
-          ->get(); 
+  
+  $auth = Auth::user();
+  if($auth != null){ 
+      $topics = DB::table('topics')
+      ->join('matrizs', 'topics.id', '=', 'matrizs.topics_id')
+      ->where('matrizs.funcaos_id', $auth->role)
+      ->get();
+      
+      $questions = DB::table('questions')
+      ->inRandomOrder()
+      ->get();
      
-          //$topics = Topic::all();
-          //$matrizs = Matriz::all();
-          //$questions = Question::all();
-           $questions = DB::table('questions')
-                      ->inRandomOrder()
-                      ->get(); 
+    return view('home', compact('topics', 'questions'));     
+  } 
+    $topics = Topic::all();
+    $questions = DB::table('questions')
+              ->inRandomOrder()
+              ->get();
 
 return view('home', compact('topics', 'questions'));
 });
