@@ -94,11 +94,9 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
+                  <div class="form-group">
                     {!! Form::label('mobile', 'Celular No.') !!}
-                    <span class="required">*</span>
                     {!! Form::text('mobile', null, ['class' => 'form-control', 'placeholder' => 'ex: (99) 9 9999-9999)', 'required' => 'required']) !!}
-                    <small class="text-danger">{{ $errors->first('mobile') }}</small>
                   </div>
                   <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
                     {!! Form::label('city', 'Cidade') !!}

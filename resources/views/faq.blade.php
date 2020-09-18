@@ -39,7 +39,7 @@
                 <!-- Authentication Links -->
                 @guest
                   <li><a href="{{ route('login') }}" title="Login">Login</a></li>
-                  <li><a href="{{ route('register') }}" title="Register">Register</a></li>
+                  <li><a href="{{ route('register') }}" title="Registrar">Register</a></li>
                 @else
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -66,8 +66,8 @@
                  
                   <li><a href="{{ route('faq.get') }}">FAQ</a></li>
                 @endguest
-                  <li><a href="{{url('pages/how-it-works')}}">How it works</a></li>
-                  <li><a href="{{url('pages/about-us')}}">About us</a></li>
+                  <li><a href="{{url('pages/how-it-works')}}">Como Funciona</a></li>
+                  <li><a href="{{url('pages/about-us')}}">Sobre Nós</a></li>
               </ul>
             </div>
           </div>

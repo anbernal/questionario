@@ -39,7 +39,7 @@
                 <!-- Authentication Links -->
                 @guest
                   <li><a href="{{ route('login') }}" title="Entrar">Entrar</a></li>
-                  <li><a href="{{ route('register') }}" title="Cadastrar-me">Cadastrar-me</a></li>
+                  <li><a href="{{ route('register') }}" title="Cadastrar-me">Cadastrar</a></li>
                 @else
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -177,7 +177,7 @@
                 <h1 class="main-block-heading text-center">{{$setting->welcome_txt}}</h1>
               @endif
                 <blockquote>
-                  Por favor, faça o <a href="{{ route('login') }}">Login</a> Para Iniciar o Quiz >>>
+                  Por favor, faça o <a href="{{ route('login') }}">Login</a> Para Iniciar a Avaliação >>>
                 </blockquote>
             </div>
         </div>

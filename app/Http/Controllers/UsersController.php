@@ -45,7 +45,6 @@ class UsersController extends Controller
         $request->validate([
           'name' => 'required|string|max:255',
           'email' => 'required|string|email|max:255|unique:users',
-          'mobile' => 'unique:users',
           'password' => 'required|string|min:6',
         ]);
 
@@ -61,7 +60,7 @@ class UsersController extends Controller
           'role' => $input['role'],
         ]);
 
-        return back()->with('added', 'User has been added');
+        return back()->with('Cadastrado', 'Cadastro salvo com sucaesso');
     }
 
     /**
@@ -101,7 +100,6 @@ class UsersController extends Controller
           'name' => 'required|string|max:255',
           'email' => 'required|string|email',
           'password' => 'required|string|min:6',
-          'mobile' => 'unique:users',
         ]);
 
         $input = $request->all();
@@ -136,7 +134,7 @@ class UsersController extends Controller
           ]);
         }
 
-        return back()->with('updated', 'Student has been updated');
+        return back()->with('Atualizado', 'Cadastro Atualizado com sucesso.');
     }
 
     /**
@@ -149,7 +147,7 @@ class UsersController extends Controller
     {
         $user = User::findOrFail($id);
         $user->delete();
-        return back()->with('deleted', 'User has been deleted');
+        return back()->with('Excluido', 'Cadastro excluido com sucesso');
     }
 
 }

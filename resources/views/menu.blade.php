@@ -30,7 +30,7 @@
 
            <li class="{{ Nav::isRoute('faq.index') }} {{ Nav::isRoute('faq.add') }} {{ Nav::isRoute('faq.edit') }}"><a href="{{route('faq.index')}}"><i class="fa fa-circle-o"></i>FAQ</a>
            </li>
-            <li class="{{ Nav::isRoute('copyright.index') }}"><a href="{{route('copyright.index')}}"><i class="fa fa-circle-o"></i>Copyright</a>
+            <!-- <li class="{{ Nav::isRoute('copyright.index') }}"><a href="{{route('copyright.index')}}"><i class="fa fa-circle-o"></i>Copyright</a>
            </li>
 
             <li class="{{ Nav::isRoute('set.facebook') }}"><a href="{{route('set.facebook')}}"><i class="fa fa-circle-o"></i>Social Login Setting</a>
@@ -42,21 +42,21 @@
            </li>
            </li>
             <li class="{{ Nav::isRoute('customstyle') }}"><a href="{{route('customstyle')}}"><i class="fa fa-circle-o"></i>Custom Style Settings</a>
-           </li>
+           </li> -->
 
         </ul>
 
 
       </li>
-
-      <li class="{{ Nav::isRoute('admin.payment') }}"><a href="{{route('admin.payment')}} " title="Payment History"><i class="fa fa-money"></i> <span>Histórico de Pagamentos</span></a></li>
+      <!-- 
+      <li class="{{ Nav::isRoute('admin.payment') }}"><a href="{{route('admin.payment')}} " title="Payment History"><i class="fa fa-money"></i> <span>Histórico de Pagamentos</span></a></li> -->
 
     @elseif ($auth->role == 'S')
-      <li><a href="{{url('/admin/my_reports')}}" title="Meu Históricos"><i class="fa fa-file-text-o"></i> <span>Meu Históricos</span></a></li>
+      <li><a href="{{url('/admin/my_reports')}}" title="Meu Histórico"><i class="fa fa-file-text-o"></i> <span>Meu Históricos</span></a></li>
 
       <li><a href="{{url('/admin/profile')}}" title="Meu Perfil"><i class="fa fa-file-text-o"></i> <span>Meu Perfil</span></a></li>
 
-       {{-- <li><a href="{{url('/admin/payment')}}" title="Payment History"><i class="fa fa-money"></i> <span>Payment History</span></a></li> --}}
+       {{-- <li><a href="{{url('/admin/payment')}}" title="Histórico Pagamentos"><i class="fa fa-money"></i> <span>Payment History</span></a></li> --}}
     @endif
   </ul>
   <!-- /.sidebar-menu -->

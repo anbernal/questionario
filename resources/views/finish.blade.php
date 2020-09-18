@@ -85,7 +85,7 @@
           <div class="question-block">
             <div class="jumbotron">
               <h2 class="text-center">Tópico - {{$topic->title}}</h2>
-              <h1 class="text-center">Obrigado!</h1>
+              <h1 class="text-center">Obrigado pela Participação!</h1>
               <p><a class="btn btn-primary btn-md" href="/home" role="button">
                 <span class="glyphicon glyphicon-home" aria-hidden="true">
                 </span>  Voltar aos Tópicos</a>
