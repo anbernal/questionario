@@ -1,12 +1,15 @@
 @extends('layouts.admin', [
   'page_header' => 'Custom Style Settings',
+  'page_icon' => 'fa fa-file-text',
   'dash' => 'active',
-  'quiz' => '',
   'users' => '',
+  'funcao' => '',
+  'matriz' => '',
+  'quiz' => '',
   'questions' => '',
   'top_re' => '',
   'all_re' => '',
-  'sett' => '',
+  'sett' => ''
 ])
 
 @section('content')

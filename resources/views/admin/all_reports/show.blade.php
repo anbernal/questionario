@@ -19,12 +19,12 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Student Name</th>
-            <th>Mobile No.</th>            
-            <th>Topic</th>
-            <th>Marks Got</th>
-            <th>Total Marks</th>
-            <th>Action</th>
+            <th>Nome</th>
+            <th>Muito Bom</th>            
+            <th>Bom</th>
+            <th>Regular</th>
+            <th>Ruim</th>
+            <th>Ação</th>
           </tr>
         </thead>
         <tbody>

@@ -1,9 +1,12 @@
 @extends('layouts.admin', [
   'page_header' => "My Report / {$topic->title}",
-  'dash' => '',
+  'page_icon' => 'fa fa-file-text',
+  'dash' => 'active',
   'users' => '',
+  'funcao' => '',
+  'matriz' => '',
+  'quiz' => '',
   'questions' => '',
-  'answers' => '',
   'top_re' => '',
   'all_re' => '',
   'sett' => ''

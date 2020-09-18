@@ -1,8 +1,11 @@
 @extends('layouts.admin', [
   'page_header' => 'Settings',
+  'page_icon' => 'fa fa-gear',
   'dash' => '',
-  'quiz' => '',
   'users' => '',
+  'funcao' => '',
+  'matriz' => '',
+  'quiz' => '',
   'questions' => '',
   'top_re' => '',
   'all_re' => '',

@@ -16,10 +16,10 @@
         <thead class="info">
           <tr>
             <th>#</th>
-            <th>Student Name</th>
-            <th>Question</th>
-            <th>Student's Answer</th>
-            <th>Correct Answer</th>
+            <th>Nome usuário</th>
+            <th>Questões</th>
+            <th>Respostas usuario</th>
+            <th>Respostas correta</th>
             <th>Delete</th>
           </tr>
         </thead>

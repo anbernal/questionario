@@ -1,8 +1,11 @@
 @extends('layouts.admin', [
   'page_header' => 'Edit FAQ',
+  'page_icon' => 'fa fa-file-text',
   'dash' => 'active',
-  'quiz' => '',
   'users' => '',
+  'funcao' => '',
+  'matriz' => '',
+  'quiz' => '',
   'questions' => '',
   'top_re' => '',
   'all_re' => '',

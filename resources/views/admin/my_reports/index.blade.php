@@ -1,8 +1,11 @@
 @extends('layouts.admin', [
   'page_header' => 'My Reports By Topic Wise',
-  'dash' => '',
-  'quiz' => '',
+  'page_icon' => 'fa fa-file-text',
+  'dash' => 'active',
   'users' => '',
+  'funcao' => '',
+  'matriz' => '',
+  'quiz' => '',
   'questions' => '',
   'top_re' => '',
   'all_re' => '',

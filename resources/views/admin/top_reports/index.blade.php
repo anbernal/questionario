@@ -1,8 +1,11 @@
 @extends('layouts.admin', [
   'page_header' => 'Top Students Report By Topic Wise',
+  'page_icon' => 'fa fa-user',
   'dash' => '',
-  'quiz' => '',
   'users' => '',
+  'funcao' => '',
+  'matriz' => '',
+  'quiz' => '',
   'questions' => '',
   'top_re' => 'active',
   'all_re' => '',
