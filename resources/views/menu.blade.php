@@ -4,13 +4,13 @@
     @if ($auth->role == 'A')
       <!-- Optionally, you can add icons to the links -->
       <li class="{{$dash}}"><a href="{{url('/admin')}}" title="Dashboard">  <i class="fa fa-bar-chart"></i> <span>Dashboard</span></a></li>
-      <li class="{{$users}}"><a href="{{url('/admin/users')}}" title="Usuário"><i class="fa fa-users"></i> <span>Usuário</span></a></li>
-      <li class="{{$funcao}}"><a href="{{url('/admin/funcao')}}" title="Ocupação - Cargo"><i class="fa fa-address-card-o"></i> <span>Ocupação - Cargo</span></a></li>
-      <li class="{{$quiz}}"><a href="{{url('admin/topics')}}" title="Competência"><i class="fa fa-gears"></i> <span>Competência</span></a></li>          
+      <li class="{{$users}}"><a href="{{url('/admin/users')}}" title="Colaborador"><i class="fa fa-users"></i> <span>Usuário</span></a></li>
+      <li class="{{$funcao}}"><a href="{{url('/admin/funcao')}}" title="Cargo"><i class="fa fa-address-card-o"></i> <span>Ocupação - Cargo</span></a></li>
+      <li class="{{$quiz}}"><a href="{{url('admin/topics')}}" title="Competências"><i class="fa fa-gears"></i> <span>Competência</span></a></li>          
       <li class="{{$questions}}"><a href="{{url('admin/questions')}}" title="Questões"><i class="fa fa-question-circle-o"></i> <span>Questões</span></a></li>
-      <li class="{{$matriz}}"><a href="{{url('admin/matriz')}}" title="Matriz de Competência"><i class="fa fa-file-text"></i> <span>Matriz de Competência</span></a></li>          
-      <li class="{{$all_re}}"><a href="{{url('/admin/all_reports')}}" title="Resultado Usuário"><i class="fa fa-file-text-o"></i> <span>Resultado Usuário</span></a></li>
-      <li class="{{$top_re}}"><a href="{{url('/admin/top_report')}}" title="Top Resultado Usuário"><i class="fa fa-user"></i> <span>Top Resultado Usuário</span></a></li>
+      <li class="{{$matriz}}"><a href="{{url('admin/matriz')}}" title="Matriz de Competências"><i class="fa fa-file-text"></i> <span>Matriz de Competência</span></a></li>          
+      <li class="{{$all_re}}"><a href="{{url('/admin/all_reports')}}" title="Resultados"><i class="fa fa-file-text-o"></i> <span>Resultado Usuário</span></a></li>
+      <li class="{{$top_re}}"><a href="{{url('/admin/top_report')}}" title="Top Resultado Colaborador"><i class="fa fa-user"></i> <span>Top Resultado Usuário</span></a></li>
 
       
        

@@ -23,7 +23,7 @@
             <div class="small-box bg-yellow">
               <div class="inner">
                 <h3>{{$user}}</h3>
-                <p>Total de Usúarios</p>
+                <p>Total de Colaboradores</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
