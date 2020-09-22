@@ -11,7 +11,7 @@
       <li class="{{$matriz}}"><a href="{{url('admin/matriz')}}" title="Matriz de Competências"><i class="fa fa-file-text"></i> <span>Matriz de Competência</span></a></li>          
       <li class="{{$all_re}}"><a href="{{url('/admin/all_reports')}}" title="Resultados"><i class="fa fa-file-text-o"></i> <span>Resultado Usuário</span></a></li>
       <li class="{{$top_re}}"><a href="{{url('/admin/top_report')}}" title="Top Resultado Colaborador"><i class="fa fa-user"></i> <span>Top Resultado Usuário</span></a></li>
-
+      <li class="{{$user_re}}"><a href="{{url('/admin/user_result')}}" title="Resultado Por Usuário"><i class="fa fa-user"></i> <span>Resultado Por Usuário</span></a></li>
       
        
       <li class="{{$sett}}"><a href="{{url('/admin/settings')}}" title="Configurações"><i class="fa fa-gear"></i> <span>Configurações</span></a></li>

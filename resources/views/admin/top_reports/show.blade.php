@@ -9,6 +9,7 @@
   'questions' => '',
   'top_re' => 'active',
   'all_re' => '',
+  'user_re' => '',
   'sett' => ''
 ])
 

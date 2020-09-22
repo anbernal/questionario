@@ -9,6 +9,7 @@
   'questions' => '',
   'top_re' => '',
   'all_re' => '',
+  'user_re' => '',
   'sett' => ''
 ])
 @section('content')

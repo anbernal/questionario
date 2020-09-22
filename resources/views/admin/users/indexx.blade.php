@@ -9,6 +9,7 @@
   'questions' => '',
   'top_re' => '',
   'all_re' => '',
+  'user_re' => '',
   'sett' => ''
 ])
 
@@ -144,7 +145,13 @@
                   </td>
                   <td>{{$user->name}}</td>
                   <td>{{$user->email}}</td>
-                  <td>{{$user->role == 'S' ? 'Usuário' : '-'}}</td>
+                  <td> 
+                  @foreach ($funcoes as $fun)
+                    @if($fun->id == $user->role)
+                        {{$fun->nome}}
+                    @endif
+                  @endforeach
+                  </td>
                   <td>
                     <!-- Edit Button -->
                     <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#{{$user->id}}EditModal"><i class="fa fa-edit"></i> Editar</a>

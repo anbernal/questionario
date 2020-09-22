@@ -106,6 +106,7 @@ Route::group(['middleware'=> 'isadmin'], function(){
 
   Route::resource('/admin/all_reports', 'AllReportController');
   Route::resource('/admin/top_report', 'TopReportController');
+  Route::resource('/admin/user_result', 'UserResultReportController');
   Route::resource('/admin/topics', 'TopicController');
   Route::resource('/admin/questions', 'QuestionsController');
   Route::post('/admin/questions/import_questions', 'QuestionsController@importExcelToDB')->name('import_questions');

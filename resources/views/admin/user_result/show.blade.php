@@ -14,6 +14,9 @@
 ])
 
 @section('content')
+<div class="margin-bottom">
+<a  href="{{url('/admin/user_result')}}" class="btn btn-wave"><i class="fa fa-arrow-circle-left"></i>&nbsp&nbsp Voltar</a>
+  </div>
   <div class="row">
     @if ($topics)
       @foreach ($topics as $key => $topic)
