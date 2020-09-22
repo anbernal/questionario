@@ -16,17 +16,19 @@
 
 <!---->
   <div class="dashboard-block">
+    
+    
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-md-12">
         <div class="row">
           <div class="col-md-6">
-            <div class="small-box bg-yellow">
+            <div class="small-box bg-gray">
               <div class="inner">
                 <h3>{{$user}}</h3>
-                <p>Total de Colaboradores</p>
+                <p>Total Colaboradores</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="fa fa-users"></i>
               </div>
               <a href="{{url('/admin/users')}}" class="small-box-footer">
                 Mais Informações <i class="fa fa-arrow-circle-right"></i>
@@ -34,60 +36,87 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="small-box bg-red">
+            <div class="small-box bg-aqua">
               <div class="inner">
-                <h3>{{$quiz}}</h3>
-                <p>Total de Qustionários</p>
+                <h3>{{$user_faltantes}}</h3>
+                <p>Total Pendentes</p>
               </div>
               <div class="icon">
-                <i class="fa fa-question-circle-o"></i>
+                <i class="fa fa-user-times"></i>
               </div>
-              <a href="{{url('/admin/topics')}}" class="small-box-footer">
+              <a href="{{url('/admin/users')}}" class="small-box-footer">
                 Mais Informações <i class="fa fa-arrow-circle-right"></i>
               </a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="small-box bg-green">
-              <div class="inner">
-                <h3>{{$question}}</h3>
-                <p>Total Questões</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-question-circle-o"></i>
-              </div>
-              <a href="{{url('/admin/questions')}}" class="small-box-footer">
-                Mais Informações <i class="fa fa-arrow-circle-right"></i>
-              </a>
-            </div>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#AllDeleteModal">Deletar Todos Usuários e Questões</button>
-            <p>Caso desejar excluir todos <strong>Usuário</strong> e <strong>Questoes </strong>!</p>
-            <!-- All Delete Button -->
-            <div id="AllDeleteModal" class="delete-modal modal fade" role="dialog">
-              <!-- All Delete Modal -->
-              <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <div class="delete-icon"></div>
-                  </div>
-                  <div class="modal-body text-center">
-                    <h4 class="modal-heading">Você tem certeza ?</h4>
-                    <p>Tem certeza que deseja EXCLUIR "todos registros"? Esse processo é irreversivel.</p>
-                  </div>
-                  <div class="modal-footer">
-                    {!! Form::open(['method' => 'POST', 'action' => 'DestroyAllController@AllAnswersDestroy']) !!}
-                        {!! Form::reset("Não", ['class' => 'btn btn-gray', 'data-dismiss' => 'modal']) !!}
-                        {!! Form::submit("Sim", ['class' => 'btn btn-danger']) !!}
-                    {!! Form::close() !!}
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-5">
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          
+        <div class="col-md-3">
+            <div class="info-box">
+              <!-- Apply any bg-* class to to the icon to color it -->
+              <span class="info-box-icon bg-blue"><i class="fa fa-tags"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text" style="font-size: 12px">Total Tópicos</span>
+                <span class="info-box-number">{{$quiz}}</span>
+                <a href="{{url('/admin/topics')}}" class="small-box-footer">
+                Mais Informações <i class="fa fa-arrow-circle-right"></i>
+              </a>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="info-box">
+              <!-- Apply any bg-* class to to the icon to color it -->
+              <span class="info-box-icon bg-darken-2"><i class="fa fa-question"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text" style="font-size: 12px">Total Questões</span>
+                <span class="info-box-number">{{$question}}</span>
+              <a href="{{url('/admin/questions')}}" class="small-box-footer">
+                Mais Informações <i class="fa fa-arrow-circle-right"></i>
+              </a>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="info-box">
+              <!-- Apply any bg-* class to to the icon to color it -->
+              <span class="info-box-icon bg-green"><i class="fa fa-check"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text" style="font-size: 12px">Total Concluídos</span>
+                <span class="info-box-number">{{$usuario_respendondido}}</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="info-box">
+              <!-- Apply any bg-* class to to the icon to color it -->
+              <span class="info-box-icon bg-orange"><i class="fa fa-clock-o"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text" style="font-size: 12px">Tempo médio Tópico</span>
+                <span class="info-box-number">6 min</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </div>
+
+
+<div class="row">
+      <div class="col-md-12">
         <div class="box box-danger">
           <div class="box-header with-border">
             <h4 class="box-title">Ultimos Usuários</h4>

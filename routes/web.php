@@ -90,15 +90,16 @@ Route::group(['middleware'=> 'isadmin'], function(){
 
   Route::get('/admin', function(){
 
+    $usuarios = User::where('role', '!=', 'A')->count();  
+    $usuario_respendondido = DB::table('answers')->distinct('user_id')->count('user_id');
     $user = User::where('role', '!=', 'A')->count();
     $question = Question::count();
     $quiz = Topic::count();
     $user_latest = User::where('id', '!=', Auth::id())->orderBy('created_at', 'desc')->get();
 
-    return view('admin.dashboard', compact('user', 'question', 'quiz', 'user_latest'));
-    //remove the answer line comment
-    // return view('admin.dashboard', compact('user', 'question', 'answer', 'quiz', 'user_latest'));
+    $user_faltantes = $usuarios - $usuario_respendondido;
 
+    return view('admin.dashboard', compact('user', 'question', 'quiz', 'user_latest','user_faltantes','usuario_respendondido'));
   });
 
   Route::delete('reset/response/{topicid}/{userid}','AllReportController@delete');
