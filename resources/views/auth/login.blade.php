@@ -88,7 +88,7 @@
             <button type="submit" class="btn btn-wave">
                 Entrar
             </button>
-            <p class="messege text-center">Novo Usuário? <a href="{{url('/register')}}" title="Criar conta">Criar conta</a></p>
+            <p class="messege text-center">Novo Colaborador? <a href="{{url('/register')}}" title="Criar conta">Criar Conta</a></p>
           </div>
           <div class="form-group text-center">
             <a href="{{url('/password/reset')}}" title="Recuperar Senha">Recuperar Senha?</a>

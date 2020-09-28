@@ -9,6 +9,7 @@ use App\Topic;
 use App\Answer;
 use App\Question;
 use App\Funcao;
+use DB;
 
 class UserResultReportController extends Controller
 {
@@ -69,28 +70,19 @@ class UserResultReportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        $topics = Topic::all();
-        $questions = Question::all();
-        $topic = Topic::findOrFail($id);
-        $answers = Answer::where('topic_id', $topic->id)->get();
-        $students = User::where('id', '!=', Auth::id())->get();
-        $c_que = Question::where('topic_id', $id)->count();
+    public function show(Request $request,$user_name)
+    { 
 
-        $filtStudents = collect();
-        foreach ($students as $student) {
-          foreach ($answers as $answer) {
-            if ($answer->user_id == $student->id) {
-              $filtStudents->push($student);
-            }
-          }
-        }
+        $funcao_id = $request->input('funcao_id');
+        $user_id = $request->input('user_id');
 
-        $filtStudents = $filtStudents->unique();
-        $filtStudents = $filtStudents->flatten();
+        $answers = Answer::where('user_id',$user_id)->get();
+        $topics = DB::table('topics')
+        ->join('matrizs', 'topics.id', '=', 'matrizs.topics_id')
+        ->where('matrizs.funcaos_id', $funcao_id)
+        ->get();
 
-        return view('admin.user_result.show', compact('filtStudents', 'answers', 'c_que', 'topics','questions'));
+        return view('admin.user_result.show', compact('answers', 'topics','user_name'));
     }
 
     /**

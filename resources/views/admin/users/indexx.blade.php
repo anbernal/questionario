@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-  'page_header' => 'Usuário',
+  'page_header' => 'COLABORADORES',
   'page_icon' => 'fa fa-users',
   'dash' => '',
   'users' => 'active',
@@ -128,7 +128,7 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Nome</th>
+              <th>Nome Completo</th>
               <th>E-mail</th>
               <th>Ocupação</th>
               <th>Acão</th>
@@ -186,7 +186,7 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Editar Usuário </h4>
+                        <h4 class="modal-title">Editar Colaborador </h4>
                       </div>
                       {!! Form::model($user, ['method' => 'PATCH', 'action' => ['UsersController@update', $user->id]]) !!}
                         <div class="modal-body">

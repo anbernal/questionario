@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-  'page_header' => 'Ocupação/Cargo',
+  'page_header' => 'OCUPAÇÃO | CARGO',
   'page_icon' => 'fa fa-address-card-o',
   'dash' => '',
   'users' => '',
@@ -29,7 +29,7 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Ocupação/Cargo</th>
+              <th>Ocupação | Cargo</th>
               <th>Acão</th>
             </tr>
           </thead>

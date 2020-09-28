@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-  'page_header' => 'Settings',
+  'page_header' => 'Configurações',
   'page_icon' => 'fa fa-gear',
   'dash' => '',
   'users' => '',
@@ -9,6 +9,7 @@
   'questions' => '',
   'top_re' => '',
   'all_re' => '',
+  'user_re' => '',
   'sett' => 'active'
 ])
 @section('content')
@@ -22,7 +23,7 @@
       <div class="box">
         <div class="box-body settings-block">
           <div class="form-group{{ $errors->has('welcome_txt') ? ' has-error' : '' }}">
-            {!! Form::label('welcome_txt', '') !!}
+            {!! Form::label('', '') !!}
             <p class="label-desc">Nome da Empresa</p>
             {!! Form::text('welcome_txt', null, ['class' => 'form-control']) !!}
             <small class="text-danger">{{ $errors->first('welcome_txt') }}</small>
@@ -30,7 +31,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group{{ $errors->has('logo') ? ' has-error' : '' }}">
-                {!! Form::label('logo', 'Logo Select') !!}
+                {!! Form::label('logo', 'Logo') !!}
                 <p class="label-desc">Alterar Logotipo</p>
                 {!! Form::file('logo') !!}
                 <small class="text-danger">{{ $errors->first('logo') }}</small>
@@ -41,7 +42,7 @@
             </div>
             <div class="col-md-6">
               <div class="form-group{{ $errors->has('favicon') ? ' has-error' : '' }}">
-                {!! Form::label('favicon', 'Favicon Select') !!}
+                {!! Form::label('favicon', 'Favicon ') !!}
                 <p class="label-desc">Alterar Favicon</p>
                 {!! Form::file('favicon') !!}
                 <small class="text-danger">{{ $errors->first('favicon') }}</small>
@@ -50,13 +51,13 @@
 
             <div class="col-md-6">
                <div class="form-group{{ $errors->has('w_email') ? ' has-error' : '' }}">
-                  {!! Form::label('w_email', 'Default Email') !!}
+                  {!! Form::label('w_email', 'Email') !!}
                    <p class="label-desc"></p>
                   {!! Form::email('w_email', null, ['class' => 'form-control', 'placeholder' => 'eg: foo@bar.com','required']) !!}
                   <small class="text-danger">{{ $errors->first('w_email') }}</small>
               </div>
             </div>
-            <div  class="col-md-6">
+            {{-- <div  class="col-md-6">
               <div class="form-group{{ $errors->has('currency_code') ? ' has-error' : '' }}">
                 {!! Form::label('currency_code', 'Currency Code') !!}
                  <p class="label-desc">- Please enter your curreny code</p>
@@ -89,7 +90,7 @@
                     <input {{ $setting->element_setting == 1 ? "checked" : "" }} type="checkbox" class="toggle-input" name="inspect" id="inspect">
                     <label for="inspect"></label>
               </div>
-            </div>
+            </div> --}}
             {{-- <div class="col-md-6">
               <div class="form-group">
                <label for="">User can repeat Quiz?</label>
@@ -102,7 +103,7 @@
           </div>
 
           
-          {!! Form::submit("Save Setting", ['class' => 'btn btn-wave btn-block']) !!}
+          {!! Form::submit("Salvar Configurações", ['class' => 'btn btn-wave btn-block']) !!}
         </div>
        
        

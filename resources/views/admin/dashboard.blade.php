@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-  'page_header' => 'Dashboard',
+  'page_header' => 'DASHBOARD GERENCIAL',
   'page_icon' => 'fa fa-bar-chart',
   'dash' => 'active',
   'users' => '',
@@ -120,7 +120,7 @@
       <div class="col-md-12">
         <div class="box box-danger">
           <div class="box-header with-border">
-            <h4 class="box-title">Ultimos Usuários</h4>
+            <h4 class="box-title">ÚLTIMOS ACESSOS</h4>
             <div class="box-tools pull-right">
               <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
               </button>
@@ -143,7 +143,7 @@
           <!-- /.box-body -->
          
           <div class="box-footer text-center">
-            <a href="{{url('admin/users')}}" class="uppercase">Todos Usuários</a>
+            <a href="{{url('admin/users')}}" class="uppercase">Todos Colaboradores</a>
           </div>
        
           <!-- /.box-footer -->

@@ -1,6 +1,6 @@
 @extends('layouts.admin', [
-  'page_header' => "Top Students / {$topic->title}",
-  'page_icon' => 'fa fa-user',
+  'page_header' => "RESULTADO POR USUÁRIOS",
+  'page_icon' => 'fa fa-user-circle-o',
   'dash' => '',
   'users' => '',
   'funcao' => '',
@@ -21,32 +21,40 @@
           <tr>
             <th>#</th>
             <th>Colaborador</th>
-            <th>Cargo/Ocupação</th>          
+            <th>Cargo | Ocupação</th>          
             <th>E-mail</th>
             <th style="text-align: center;">Resultado</th>
           </tr>
         </thead>
         <tbody>
             @if ($users)
-              @php($n = 1)
+              @php $n = 1;
+              @endphp
               @foreach ($users as $user)
                 <tr>
                   <td>
                   {{$n}}
-                    @php($n++)
+                  @php $n++; @endphp
                   </td>
                   <td>{{$user->name}}</td>
                   <td>
-                  @foreach ($funcao as $fun)
-                  @if($fun->id == $user->role)
+                  @php
+                    $qu_count = 0;
+                    $dados = array();
+                  @endphp
+                  @foreach($funcao as $fun)
+                    @if($fun->id == $user->role)
+                     @php
+                    
+                      $dados = array("user_name" => $user->name, "funcao_id" => $fun->id, "user_id" => $user->id);
+                      @endphp
                         {{$fun->nome}}
                     @endif
                   @endforeach
                   </td>
                   <td>{{$user->email}}</td>
                   <td style="text-align: center;">
-                    <!-- Edit Button -->
-                    <a href="{{route('user_result.show', $topic->id)}}" type="button" class="btn btn-info btn-xs"><i class="fa fa-plus-circle"></i>&nbsp&nbsp Veja mais</a>
+                    <a href="{{route('user_result.show', $dados )}}" type="button" class="btn btn-info btn-xs"><i class="fa fa-plus-circle"></i>&nbsp&nbsp Veja mais</a>
                     
                   </td>
                 </tr>

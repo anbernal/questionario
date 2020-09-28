@@ -51,7 +51,7 @@ class FuncaoController extends Controller
             'nome' => $input['nome'],
           ]);
   
-          return back()->with('added', 'Ocupação/Cargo, Salvo com sucesso!');
+          return back()->with('added', 'Ocupação | Cargo. Salvo com sucesso!');
     }
 
     /**

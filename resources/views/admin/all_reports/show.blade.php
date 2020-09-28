@@ -62,7 +62,7 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Nome</th>
+            <th>Nome Completo</th>
             <th>Muito Bom</th>            
             <th>Bom</th>
             <th>Regular</th>

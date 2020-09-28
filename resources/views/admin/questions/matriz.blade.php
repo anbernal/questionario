@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-  'page_header' => 'Matriz de Competência',
+  'page_header' => 'MATRIZ DE COMPETÊNCIAS',
   'page_icon' => 'fa fa-file-text',
   'dash' => '',
   'quiz' => '',

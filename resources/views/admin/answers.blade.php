@@ -16,7 +16,7 @@
         <thead class="info">
           <tr>
             <th>#</th>
-            <th>Nome usuário</th>
+            <th>Nome Colaborador</th>
             <th>Questões</th>
             <th>Respostas usuario</th>
             <th>Respostas correta</th>

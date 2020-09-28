@@ -56,7 +56,7 @@ $setting = App\Setting::first();
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
-      <a href="{{url('/')}}" class="btn visit-btn" target="_blank" title="Visitar Site ">Visitar Site <i class="fa fa-arrow-circle-o-right"></i></a>
+      {{-- <a href="{{url('/')}}" class="btn visit-btn" target="_blank" title="Visitar Site ">Visitar Site <i class="fa fa-arrow-circle-o-right"></i></a> --}}
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
@@ -65,7 +65,7 @@ $setting = App\Setting::first();
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Bem vindo, {{$auth->name}}</span>
+              <span class="hidden-xs">Bem Vindo , {{$auth->name}}</span>
               <i class="fa fa-user hidden-lg hidden-md hidden-sm"></i>
             </a>
             <ul class="dropdown-menu">

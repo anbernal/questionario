@@ -9,6 +9,7 @@
   'questions' => '',
   'top_re' => '',
   'all_re' => '',
+  'user_re' => '',
   'sett' => ''
 ])
 
@@ -16,7 +17,8 @@
   <div class="box">
     <div class="box-body">
       <div class="margin-bottom">
-      <a title="Create a new page" href="{{ route('pages.add') }}" class="btn btn-md btn-primary">+ Create Page</a>
+      <a title="Nova Página" href="{{ route('pages.add') }}" class="btn btn-md btn-primary">
+        <i class="fa fa-plus-square" aria-hidden="true"></i>&nbsp;&nbsp;Nova Página</a>
         
       </div>
       
@@ -24,7 +26,7 @@
         <thead>
           <tr>
             <th>SN</th>
-            <th>Title</th>
+            <th>Título</th>
 
             <th>URL</th>
             <th>Status</th>
@@ -48,9 +50,9 @@
               <td>
                 
                    @if($page->status=="1")
-                              Active
+                              Ativar
                             @else
-                              Deactive
+                              Desativar
                             @endif
                
               </td>
@@ -61,7 +63,7 @@
                 <form method="POST" action="{{ route('pages.delete',$page->id) }}">
                   {{ method_field('DELETE') }}
                   {{ csrf_field() }}
-                  <button onclick="return confirm('DELETE this page?')" type="submit" class="btn btn-sm btn-danger"/><i class="fa fa-trash-o"></i></button>
+                  <button onclick="return confirm('Excluir essa página ?')" type="submit" class="btn btn-sm btn-danger"/><i class="fa fa-trash-o"></i></button>
                 </form>
               </td>
             </tr>

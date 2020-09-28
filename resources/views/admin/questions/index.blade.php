@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-  'page_header' => 'Adicionar Questões',
+  'page_header' => 'ADICIONAR QUESTÕES',
   'page_icon' => 'fa fa-question-circle-o',
   'dash' => '',
   'users' => '',

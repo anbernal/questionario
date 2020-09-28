@@ -1,5 +1,5 @@
 @extends('layouts.admin', [
-  'page_header' => 'Competência',
+  'page_header' => 'COMPETÊNCIAS',
   'page_icon' => 'fa fa-gears',
   'dash' => '',
   'users' => '',

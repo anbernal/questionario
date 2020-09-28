@@ -1,6 +1,6 @@
 @extends('layouts.admin', [
   'page_header' => 'RESULTADO DOS USUÁRIO',
-  'page_icon' => 'fa fa-file-text-o',
+  'page_icon' => 'fa fa-tags',
   'dash' => '',
   'users' => '',
   'funcao' => '',
