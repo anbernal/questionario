@@ -1,6 +1,6 @@
 <!-- Sidebar Menu -->
 <ul class="sidebar-menu" data-widget="tree">
-    <li class="header">Menu Principal</li>
+    <li class="header"><i class="fa fa-caret-down" aria-hidden="true">&nbsp;&nbsp;MENU PRINCIPAL</i></li>
     @if ($auth->role == 'A')
       <!-- Optionally, you can add icons to the links -->
       <li class="{{$dash}}"><a href="{{url('/admin')}}" title="Dashboard">  <i class="fa fa-bar-chart"></i> <span>Dashboard</span></a></li>
